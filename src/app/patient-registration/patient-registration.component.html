@@ -1,0 +1,135 @@
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+
+
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-lg-3 leftGrid">
+          <div id="wrapper" class="toggled" style="margin-top:62px">
+              <!-- Sidebar -->
+              <div id="sidebar-wrapper">
+                  <ul class="sidebar-nav">
+                      <li class="sidebar-brand">
+                          <a href="#"><mat-icon class="navIcons">face</mat-icon><label class="sideNavtitle">
+                              All Patients</label></a>
+                      </li>
+                      <li>
+                          <a href="#"><mat-icon class="navIcons">book</mat-icon><label class="sideNavtitle">
+                              Appointments</label></a>
+                      </li>
+                      <li>
+                          <a href="#"><mat-icon class="navIcons">dashboard</mat-icon><label class="sideNavtitle">
+                              Dashboard</label></a>
+                      </li>
+                      <li>
+                  </ul>
+              </div>
+              <!-- /#sidebar-wrapper -->
+          </div>
+          <div class="mediIcon">
+              <span class="material-icons" (click)="onClick()">brightness_7</span>
+          </div>
+        </div>
+      <div class="col-lg-6">
+      <div class="centerGrid scroll">
+        <div class="wrapper">
+            <div class="form-input">
+              <label class="icon glyphicon glyphicon-search" style="color: #882694 !important;"></label>
+              <label class="button glyphicon glyphicon-camera" (click)="openDialog()" style="color: #882694 !important;"
+              matTooltip="Click Here To Scan Face"></label>
+              <input id="uid" type="text" class="input" placeholder="Search by Name | Mobile number">
+            </div>
+        </div>
+        <div *ngFor="let obj of patientData;let i = index" class="bottomSpace">
+          <div style="margin-top: 21px;">
+          <span class="material-icons icons">person</span>
+          <span class="fontFamily"> {{obj.name}}</span>
+          <span class="material-icons spanCss">keyboard_arrow_right</span>
+          </div>
+        </div>
+        </div>
+        <div style="margin-top: -52px;">
+           <mat-icon class="addIcon" style="float: right;">add_circle</mat-icon>
+        </div>
+     </div>
+     <div class="col-lg-3 leftGrid">
+       <div class="rightGrid scroll">
+            <div class="mat-card row col-12">
+              <div class="col-sm-1" style="margin: 12px;">
+                  <div class="col"><label class="header">DOB</label></div>
+                  <div class="col"><label class="header">AGE</label></div>
+                  <div class="col"><label class="header">GEN</label></div>
+                  <div class="col"><label class="header">PHN</label></div>
+              </div>
+              <div class="col-sm-8" style="margin: 12px;">
+                  <div class="col"><label>18-AUG-1954</label></div>
+                  <div class="col"><label>63</label></div>
+                  <div class="col"><label>MALE</label></div>
+                  <div class="col"><label>+91 7995237342</label></div>
+              </div>
+            </div>
+
+             <div class="mat-card row col-12">
+              <div class="col-sm-12" style="margin: 12px;">
+                  <div class="col"><label class="header">ADD ALLERGIES</label><label class="edit"><p class="ptext">EDIT</p></label></div>
+                  <div class="col"><label>Latex Allergy, Mold Allergy, PetAllergy, Pollen Allergy</label></div>
+              </div>
+            </div>
+
+            <div class="mat-card row col-12">
+                <div class="col-sm-12" style="margin: 12px;margin-bottom: -11px;">
+                    <div class="col"><label class="header">EMERGENCY CONTACT</label><label class="edit"><p class="ptext">EDIT</p></label></div>
+                </div>
+                <div class="col-sm-1" style="margin: 12px;">
+                    <div class="col"><label class="header">NME</label></div>
+                    <div class="col"><label class="header">REL</label></div>
+                    <div class="col"><label class="header">PHN</label></div>
+                </div>
+                <div class="col-sm-8" style="margin: 12px;">
+                    <div class="col"><label>NANDINI VEDA</label></div>
+                    <div class="col"><label>Mother</label></div>
+                    <div class="col"><label>+91 7995237342</label></div>
+                </div>
+            </div>
+
+            <div class="mat-card row col-12">
+                <div class="col-sm-12" style="margin: 12px;
+                margin-bottom: -11px;
+                margin-top: 3px">
+                    <div class="col"><label class="header">INSURANCE INFO</label><label class="edit"><p class="ptext">EDIT</p></label></div>
+                </div>
+                <div class="col-sm-1" style="margin: 12px;">
+                    <div class="col"><label class="header">NME</label></div>
+                    <div class="col"><label class="header">REL</label></div>
+                    <div class="col"><label class="header">PHN</label></div>
+                </div>
+                <div class="col-sm-8" style="margin: 12px;">
+                    <div class="col"><label>NANDINI VEDA</label></div>
+                    <div class="col"><label>Mother</label></div>
+                    <div class="col"><label>+91 7995237342</label></div>
+                </div>
+            </div>
+            <div class="mat-card row col-12">
+                <div class="col-sm-12" style="margin: 12px;">
+                    <div class="col"><label class="header">ADDRESS</label><label class="edit"><p class="ptext">EDIT</p></label></div>
+                    <div class="col"><label>2930 Chestnut st, Philadelphia, 19104</label></div>
+                </div>
+              </div>
+          </div>
+          <div>
+            <label class="delete">DELETE PATIENT</label>
+          </div>
+      </div>
+  </div>
+</div>
+
